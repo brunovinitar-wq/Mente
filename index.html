@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial de GitHub</title>
+    <style>
+      :root {
+        --bg: #0d1117;
+        --panel: #161b22;
+        --panel-2: #21262d;
+        --text: #e6edf3;
+        --muted: #8b949e;
+        --accent: #2f81f7;
+        --accent-2: #3fb950;
+        --border: #30363d;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #0d1117 0%, #111827 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      h1, h2, h3 {
+        color: var(--text);
+        margin-top: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        margin-bottom: 20px;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        background: rgba(22, 27, 34, 0.9);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 24px 26px;
+        margin-bottom: 24px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .steps {
+        display: grid;
+        gap: 18px;
+      }
+
+      .step {
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 18px 20px;
+      }
+
+      code {
+        background: #0d1117;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 2px 6px;
+        color: #c9d1d9;
+        font-size: 0.95em;
+      }
+
+      pre {
+        background: #0d1117;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+        overflow-x: auto;
+        color: #c9d1d9;
+      }
+
+      ul, ol {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(47, 129, 247, 0.12);
+        color: #8ec5ff;
+        border: 1px solid rgba(47, 129, 247, 0.5);
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="badge">GitHub para iniciantes</div>
+      <h1>Tutorial de GitHub</h1>
+      <p class="lead">
+        Aprenda os conceitos básicos do GitHub para versionar projetos, colaborar com outras pessoas e publicar código na internet.
+      </p>
+
+      <section class="card">
+        <h2>O que é GitHub?</h2>
+        <p>
+          O GitHub é uma plataforma online para hospedar repositórios Git. Ele permite que você armazene projetos, acompanhe alterações, trabalhe em equipe e publique código.
+        </p>
+        <p>
+          O Git é o sistema de controle de versões, e o GitHub é a plataforma que facilita a colaboração e o compartilhamento desses projetos.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Passo a passo</h2>
+        <div class="steps">
+          <div class="step">
+            <h3>1. Crie uma conta no GitHub</h3>
+            <p>Abra o site <a href="https://github.com" target="_blank" rel="noreferrer" style="color:#8ec5ff;">github.com</a> e cadastre-se gratuitamente.</p>
+            <ul>
+              <li>Escolha um nome de usuário.</li>
+              <li>Crie uma senha forte.</li>
+              <li>Verifique seu e-mail.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h3>2. Instale o Git</h3>
+            <p>Baixe e instale o Git no seu computador:</p>
+            <ul>
+              <li>Windows: <a href="https://git-scm.com/download/win" target="_blank" rel="noreferrer" style="color:#8ec5ff;">Git para Windows</a></li>
+              <li>Mac: <code>xcode-select --install</code> ou baixar do site oficial.</li>
+              <li>Linux: use o gerenciador de pacotes da sua distribuição.</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h3>3. Configure o Git</h3>
+            <p>Abra o terminal e configure seu nome e e-mail:</p>
+            <pre><code>git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@exemplo.com"</code></pre>
+          </div>
+
+          <div class="step">
+            <h3>4. Crie um repositório</h3>
+            <p>No GitHub, clique em <strong>New repository</strong> e preencha:</p>
+            <ul>
+              <li>Nome do repositório</li>
+              <li>Descrição</li>
+              <li>Escolha entre público ou privado</li>
+              <li>Marque <strong>Initialize this repository with a README</strong> (opcional)</li>
+            </ul>
+          </div>
+
+          <div class="step">
+            <h3>5. Clone o repositório</h3>
+            <p>Copie a URL do repositório e use:</p>
+            <pre><code>git clone https://github.com/seu-usuario/seu-repositorio.git</code></pre>
+          </div>
+
+          <div class="step">
+            <h3>6. Crie arquivos e faça commits</h3>
+            <p>Dentro da pasta do projeto, faça alterações e salve os arquivos:</p>
+            <pre><code>git status
+git add .
+git commit -m "Adiciona arquivos iniciais"</code></pre>
+            <p><strong>git status</strong> mostra as alterações; <strong>git add</strong> prepara os arquivos; <strong>git commit</strong> salva uma versão.</p>
+          </div>
+
+          <div class="step">
+            <h3>7. Envie para o GitHub</h3>
+            <p>Depois de confirmar as alterações, envie para o repositório remoto:</p>
+            <pre><code>git push origin main</code></pre>
+            <p>Se o branch padrão for <code>master</code>, use <code>git push origin master</code>.</p>
+          </div>
+
+          <div class="step">
+            <h3>8. Explore branches e pull requests</h3>
+            <p>Branches permitem criar versões paralelas do projeto. Exemplo:</p>
+            <pre><code>git checkout -b feature-nova-tela
+git push origin feature-nova-tela</code></pre>
+            <p>Depois, no GitHub, você pode abrir um Pull Request para revisar e unir as mudanças ao projeto principal.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Comandos úteis</h2>
+        <ul>
+          <li><code>git init</code> — inicia um repositório local.</li>
+          <li><code>git log</code> — mostra o histórico de commits.</li>
+          <li><code>git pull</code> — atualiza seu repositório local com as mudanças do remoto.</li>
+          <li><code>git branch</code> — lista branches.</li>
+          <li><code>git merge</code> — junta alterações de uma branch em outra.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Dicas importantes</h2>
+        <ol>
+          <li>Faça commits pequenos e com mensagens claras.</li>
+          <li>Antes de começar, sempre veja o estado do projeto com <code>git status</code>.</li>
+          <li>Use branches para desenvolver funções separadas.</li>
+          <li>Revise Pull Requests antes de aceitar mudanças.</li>
+          <li>Faça backups e sincronize o projeto com frequência.</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
